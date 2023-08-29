@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quer Orar?</title>
     <style>
-        *{
+        * {
             margin: 0;
             border: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body{
-            background: linear-gradient(pink,purple);
+        body {
+            background: linear-gradient(pink, purple);
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
@@ -21,59 +21,78 @@
         .btn {
             background-color: black;
             color: white;
-            font: 300 40px 'Poppins', sans-serif;
-            padding: 15px 30px;
-            width: 200px;
-            border-radius: 15px;
+            font: 300 20px 'Poppins', sans-serif;
+            padding: 10px 20px;
+            width: 150px;
+            border-radius: 10px;
             cursor: pointer;
             transition: ease-in-out 0.3s;
         }
 
-        .tituloPrincipal{
-            font: 700 40px 'Poppins', sans-serif;
+        .tituloPrincipal {
+            font: 700 30px 'Poppins', sans-serif;
         }
 
-        .titulo{
+        .titulo {
             text-align: center;
-            margin: 50px 0;
+            margin: 20px 0;
         }
 
-        .botoes{
+        .botoes {
             display: flex;
-            justify-content: space-between;
-            margin: 0 200px;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
         }
-        
-      
+
+        @media (min-width: 768px) {
+            .btn {
+                font-size: 24px;
+                padding: 15px 30px;
+                width: 200px;
+            }
+
+            .tituloPrincipal {
+                font-size: 40px;
+            }
+
+            .titulo {
+                margin: 50px 0;
+            }
+
+            .botoes {
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 100px;
+            }
+        }
     </style>
     <script>
-        function sim(){
-            location.href = "https://open.spotify.com/playlist/6nHKwzkUlekcurLHoYQ2IB?si=ef02b1fd5e674bb9"
+        function sim() {
+            location.href = "https://open.spotify.com/playlist/6nHKwzkUlekcurLHoYQ2IB?si=ef02b1fd5e674bb9";
         }
-        function esquivo(btn){
+        function esquivo(btn) {
             btn.style.position = 'absolute';
             btn.style.bottom = posicao(10, 80);
             btn.style.left = posicao(10, 80);
         }
-        function posicao(min, max){
-            return(Math.random()*(max-min+min))+"%"
+        function posicao(min, max) {
+            return (Math.random() * (max - min + min)) + "%";
         }
     </script>
 </head>
 <body>
     <div class="titulo">
         <h1 class="tituloPrincipal">
-            QUER ORAR COMIGO?
+            QUER ORAR CMG?
         </h1>
     </div>
     <div class="botoes">
         <div class="botaoS">
-            <button class="btn" onclick="sim()">SIM
-            </button>
+            <button class="btn" onclick="sim()">SIM</button>
         </div>
         <div class="botaoN">
-            <button class="btn" onclick="esquivo(this)" onmouseover="esquivo(this)">NÃO
-            </button>
+            <button class="btn" onclick="esquivo(this)" onmouseover="esquivo(this)">NÃO</button>
         </div>
     </div>
 </body>
